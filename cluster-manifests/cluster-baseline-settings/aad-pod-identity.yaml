@@ -251,7 +251,7 @@ spec:
             memory: 256Mi
       nodeSelector:
         kubernetes.io/os: linux
-        agentpool: npuser01
+        agentpool: usrnodepool
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -316,7 +316,7 @@ spec:
           path: /etc/kubernetes/azure.json
       nodeSelector:
         kubernetes.io/os: linux
-        agentpool: npuser01
+        agentpool: usrnodepool
 ---
 apiVersion: aadpodidentity.k8s.io/v1
 kind: AzurePodIdentityException
