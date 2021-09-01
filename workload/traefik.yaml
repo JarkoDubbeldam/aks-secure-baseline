@@ -130,8 +130,6 @@ data:
         address = ":9000"
       [entryPoints.websecure]
         address = ":8443"
-        [entryPoints.web.forwardedHeaders]
-          trustedIPs = ["10.240.4.16/28"]
         [entryPoints.websecure.http.tls]
           options = "default"
     [ping]
