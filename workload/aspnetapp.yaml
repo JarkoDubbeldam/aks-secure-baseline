@@ -24,27 +24,7 @@ spec:
       securityContext:
         runAsUser: 10001
         runAsGroup: 3000
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: app.kubernetes.io/name
-                operator: In
-                values:
-                - aspnetapp
-            topologyKey: "kubernetes.io/hostname"
-        podAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - weight: 1
-            podAffinityTerm:
-              labelSelector:
-                matchExpressions:
-                - key: app.kubernetes.io/name
-                  operator: In
-                  values:
-                  - traefik-ingress-ilb
-              topologyKey: "kubernetes.io/hostname"
+
       containers:
       - name: aspnet-webapp-sample
         image: mcr.microsoft.com/dotnet/samples:aspnetapp
