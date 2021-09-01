@@ -121,8 +121,6 @@ data:
     # Enable gzip compression
     [http.middlewares]
       [http.middlewares.gzip-compress.compress]
-      [http.middlewares.app-gateway-snet.ipWhiteList]
-        sourceRange = ["10.240.4.16/28"]
     [entryPoints]
       [entryPoints.metrics]
         address = ":8082"
@@ -131,7 +129,7 @@ data:
       [entryPoints.websecure]
         address = ":8443"
         [entryPoints.web.forwardedHeaders]
-          trustedIPs = ["10.240.4.16/28"]
+          trustedIPs = ["0.0.0.0/0"]
         [entryPoints.websecure.http.tls]
           options = "default"
     [ping]

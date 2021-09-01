@@ -106,7 +106,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.tls.options: default
-    traefik.ingress.kubernetes.io/router.middlewares: app-gateway-snet@file, gzip-compress@file
+    traefik.ingress.kubernetes.io/router.middlewares: gzip-compress@file
 spec:
   # ingressClassName: "traefik-internal"
   tls:
