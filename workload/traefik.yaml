@@ -227,7 +227,7 @@ spec:
         # az acr import --source docker.io/library/traefik:v2.4.8 -n <your-acr-instance-name>
         # and then set this to
         # image: <your-acr-instance-name>.azurecr.io/library/traefik:v2.4.8
-      - image: docker.io/library/traefik:v2.4.8
+      - image: acraksrfzq2ec5xxuxo.azurecr.iolibrary/traefik:v2.4.8
         name: traefik-ingress-controller
         resources:
           requests:
@@ -292,8 +292,8 @@ spec:
             driver: secrets-store.csi.k8s.io
             readOnly: true
             volumeAttributes:
-              secretProviderClass: aks-ingress-contoso-com-tls-secret-csi-akv
+              secretProviderClass: datascience-o-indy-azure-tls-secret-csi-akv
         - name: data
           emptyDir: {}
       nodeSelector:
-       agentpool: npuser01
+       agentpool: usrnodepool
