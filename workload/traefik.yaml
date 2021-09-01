@@ -121,8 +121,6 @@ data:
     # Enable gzip compression
     [http.middlewares]
       [http.middlewares.gzip-compress.compress]
-      [http.middlewares.app-gateway-snet.ipWhiteList]
-        sourceRange = ["10.240.4.16/28"]
     [entryPoints]
       [entryPoints.metrics]
         address = ":8082"
